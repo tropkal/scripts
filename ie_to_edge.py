@@ -1,3 +1,10 @@
+# I wrote this quick python script for my work where I have quite a few PCs in production running Win10 and using an internal application that only works on IE.
+# So because of IE going EoL June 15th 2022, I needed a way to still keep production going by using Edge in IE compatibility mode. 
+
+# I bundled this code and its dependencies into an exe using PyInstaller, so I could use it on Win10 machines without actually installing python on each machine.
+# It takes about 40 seconds to load up the exe, but hey if it works, it works, and its a temporary solution anyway until we migrate our internal app to work 100%
+# with Edge or create a C# or C++ exe to do the same thing as this, but a lot faster.
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
