@@ -26,7 +26,6 @@ def open_urls():
     try:
         # continue with opening each url in URLS[] starting at index 1 (index 0 already opened)
         for url in URLS[1:]:
-
             # open new tab and go to {url}
             driver.execute_script(f"window.open(\"{url}\");")
             time.sleep(0.5)
