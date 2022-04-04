@@ -35,8 +35,12 @@ def get_arch():
             # the actual name of the file needs to be exactly "IEDriverServer.exe"
             shutil.copyfile(f"\\\\source_to_file\\{_arch}",\
                             f"C:\\Users\\{username}\\AppData\\Local\\Microsoft\\WindowsApps\\IEDriverServer.exe")
-    except:
-        print("Exception occured in get_arch()")
+    except DeprecationWarning:
+        pass
+
+    except error as e:
+        print("Error occured in get_arch()")
+        print(e)
         
 
 def start_instance():
@@ -57,8 +61,12 @@ def start_instance():
 
         driver.get("url_to_be_opened")
 
-    except:
-        print("Exception occured in start_instance()")
+    except DeprecationWarning:
+        pass
+
+    except error as e:
+        print("Error occured in start_instance()")
+        print(e)
 
 if __name__ == "__main__":
     get_arch()
