@@ -29,12 +29,12 @@ def open_urls():
             # open new tab and go to {url}
             driver.execute_script(f"window.open(\"{url}\");")
             time.sleep(0.5)
-
-        # move to the 1st tab, just QoL    
-        driver.switch_to.window("firsttab")
+            
+    except Exception as e:
+        print("Error occured! " + e)
         
-    except:
-        print("Error occured!")
+    # move to the 1st tab, just QoL    
+    driver.switch_to.window("firsttab")
 
 if __name__ == "__main__":
     open_urls()
