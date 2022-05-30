@@ -7,6 +7,7 @@
 from pysnmp.entity.rfc3413.oneliner import cmdgen # pip install pysnpm
 import os
 import time
+import sys
 
 # This is the path where the report will be saved, ie. c:\counters_report.txt
 PATH_TO_OUTFILE = '<path>'
